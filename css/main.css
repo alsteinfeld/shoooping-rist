@@ -123,10 +123,6 @@ body {
 	vertical-align: middle;
 }
 
-.check {
-	display: none;
-}
-
 .list-row img {
 	display: inline-block;
 	float: right;
@@ -140,4 +136,17 @@ body {
 	display: inline-block;
 	position: relative;
 	vertical-align: middle;
-}	
+}
+
+/* action classes */
+
+.cross {
+	text-decoration: line-through;
+}
+
+.remove {
+	display: none;
+}
+
+
+
