@@ -14,13 +14,14 @@ Hint: .val() and .prepend() or .append()
 $(document).ready( function() {
 	$('.list-input').submit( function (event) {
 		var listItem = $('.textinput').val();
-		var $newListItem = $('<li><ul class="list-row"><li>' + listItem + '</li><img src="http://www.worldstores.co.uk/c/images/sticky_signup/close-button.gif"></ul></li>');
+		var $newListItem = $('<li><ul class="list-row"><li class="list-row-text">' + listItem + '</li><img src="http://www.worldstores.co.uk/c/images/sticky_signup/close-button.gif"></ul></li>');
 		$('.list-output').append ($newListItem);
 		event.preventDefault();
 		$('.textinput').val('');
 	});
 	$('.list-row').children('li').on('click', function() {
 		$(this).toggleClass('cross');
+		console.log('click');
 	});
 	$('.list-row').children('img').on('click', function() {
 		$(this).parent().addClass('remove');
