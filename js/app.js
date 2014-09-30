@@ -14,7 +14,7 @@ Hint: .val() and .prepend() or .append()
 $(document).ready( function() {
 	$('.list-input').submit( function (event) {
 		var listItem = $('.textinput').val();
-		var $newListItem = $('<li><ul class="list-row"><li class="list-row-text">' + listItem + '</li><img src="http://www.worldstores.co.uk/c/images/sticky_signup/close-button.gif"></ul></li>');
+		var $newListItem = $('<li><ul class="list-row"><li class="list-row-text">' + listItem + '</li><img class="list-row-x" src="http://www.worldstores.co.uk/c/images/sticky_signup/close-button.gif"></ul></li>');
 		$('.list-output').append ($newListItem);
 		event.preventDefault();
 		$('.textinput').val('');
