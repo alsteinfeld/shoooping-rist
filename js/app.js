@@ -19,11 +19,11 @@ $(document).ready( function() {
 		event.preventDefault();
 		$('.textinput').val('');
 	});
-	$('.list-row').children('li').on('click', function() {
+	$('.list-row-text').on('click', function() {
 		$(this).toggleClass('cross');
 		console.log('click');
 	});
-	$('.list-row').children('img').on('click', function() {
+	$('.list-row-x').on('click', function() {
 		$(this).parent().addClass('remove');
 	});
 });
