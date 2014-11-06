@@ -15,15 +15,17 @@ $(document).ready( function() {
 	$('.list-input').submit( function (event) {
 		var listItem = $('.textinput').val();
 		var $newListItem = $('<li><ul class="list-row"><li class="list-row-text">' + listItem + '</li><img class="list-row-x" src="http://www.worldstores.co.uk/c/images/sticky_signup/close-button.gif"></ul></li>');
-		$('.list-output').append ($newListItem);
-		event.preventDefault();
+		$('.list-output').append($newListItem);
 		$('.textinput').val('');
+		event.preventDefault();
 	});
-	$('.list-row-text').on('click', function() {
+	$('.list-output').on('click', '.list-row-text', function(event) {
 		$(this).toggleClass('cross');
 		console.log('click');
+		event.preventDefault();
 	});
-	$('.list-row-x').on('click', function() {
-		$(this).parent().addClass('remove');
+	$('.list-output').on('click', '.list-row-x', function(event) {
+		$(this).parent().fadeOut();
+		event.preventDefault();
 	});
 });
